@@ -89,7 +89,13 @@ sumNumbers([]) //=> 0
 -----------------------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
 
-
+function sumNumbers(array) {
+  let answer = 0
+  for (let i = 0; i < array.length; i++) {
+    answer += array[i]
+  }
+  return answer
+}
 
 
 
