@@ -186,7 +186,21 @@ range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------------------*/
 // Your solution for 06-range here:
 
-
+function range(num1, num2) {
+  console.log("first:"+ num1 + " this the second:" + num2)
+  if (num1>num2) {
+    return "First argument must be less than second"
+  } else { 
+    let initialNum = num1 - 1
+    let rangeArray = []
+    let times = num2 - num1
+    for (let i = 0; i < times; i++) {
+      initialNum +=1
+      rangeArray.push(initialNum)
+    }
+    return rangeArray
+  }
+}
 
 
 
