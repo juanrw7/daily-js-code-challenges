@@ -222,7 +222,10 @@ reverseUpcaseString("SEI Rocks!") //=> "!SKCOR IES"
 // Your solution for 07-reverseUpcaseString here:
 
 
-
+function reverseUpcaseString(string) { 
+  const stringReverse =  string.split('').reverse().join('').toUpperCase(); 
+  return stringReverse
+} 
 
 
 /*-----------------------------------------------------------------------------
