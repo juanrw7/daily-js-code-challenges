@@ -119,7 +119,13 @@ addList(7,-12) //=> -5
 -----------------------------------------------------------------------------*/
 // Your solution for 04-addList here:
 
-
+function addList(...numbers) {
+  let answer = 0
+  for (const num of numbers) {
+    answer += num
+  }
+  return answer
+}
 
 
 
