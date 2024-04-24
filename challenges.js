@@ -187,7 +187,6 @@ range(5,2) //=> "First argument must be less than second"
 // Your solution for 06-range here:
 
 function range(num1, num2) {
-  console.log("first:"+ num1 + " this the second:" + num2)
   if (num1>num2) {
     return "First argument must be less than second"
   } else { 
@@ -247,7 +246,17 @@ removeEnds('a') //=> "" (empty string)
 // Your solution for 08-removeEnds here:
 
 
-
+function removeEnds(string) { 
+  const stringNoEnds =  string.split('')
+  if (stringNoEnds.length <3) {
+    return ""
+  } else {
+    stringNoEnds.shift()
+    stringNoEnds.pop()
+    let result = stringNoEnds.join('')
+    return result
+  }
+} 
 
 
 /*-----------------------------------------------------------------------------
