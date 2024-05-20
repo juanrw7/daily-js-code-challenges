@@ -312,8 +312,6 @@ function charCount(string) {
   return count
 }
 
-console.log(charCount("hola"))
-
 
 /*-----------------------------------------------------------------------------
 Challenge: 10-formatWithPadding
@@ -341,7 +339,17 @@ formatWithPadding(1234, '*', 3) //=> "1234"
 -----------------------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
 
+function formatWithPadding (num, string, totalLength) {
+  const numLength = num.toString().length
+  if (numLength>=totalLength) {
+    return num.toString()
+  } else {
+    const padding = string.repeat(totalLength - numLength)
+    return padding + num
+  }
+}
 
+console.log(formatWithPadding(323, "t", 2))
 
 
 
