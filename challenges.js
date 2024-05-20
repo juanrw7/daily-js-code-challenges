@@ -349,8 +349,6 @@ function formatWithPadding (num, string, totalLength) {
   }
 }
 
-console.log(formatWithPadding(323, "t", 2))
-
 
 
 /*-----------------------------------------------------------------------------
@@ -377,9 +375,22 @@ isPalindrome('') //=> true
 -----------------------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
 
+function isPalindrome(string) {
+  if (string.length <= 1) {
+    return true
+  }
 
+  const testString = string.toLowerCase().replaceAll(" ","")
 
+  const reversedTestString = testString.split("").reverse().join("")
 
+  if (testString === reversedTestString) {
+    return true
+  } else {
+    return false
+  }
+
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 12-hammingDistance
