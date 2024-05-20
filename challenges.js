@@ -297,8 +297,22 @@ charCount('Today is fantastic!')
 -----------------------------------------------------------------------------*/
 // Your solution for 09-charCount here:
 
+function charCount(string) {
+  const count = {}
+  const stringToArray = string.split("")
 
+  stringToArray.forEach(char => {
+    if (count[char]) {
+      count[char] += 1
+    } else {
+      count[char] = 1
+    }
+  });
 
+  return count
+}
+
+console.log(charCount("hola"))
 
 
 /*-----------------------------------------------------------------------------
