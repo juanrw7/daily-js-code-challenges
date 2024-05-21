@@ -459,9 +459,13 @@ mumble('!A 2') //=> '!-AA-   -2222'
 -----------------------------------------------------------------------------*/
 // Your solution for 13-mumble here:
 
+function mumble(string) {
+  const array1 = string.split("")
 
+  const result = array1.map((letter, index) => (letter + letter.repeat(index)))
 
-
+  return result.join("-")
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 14-fromPairs
