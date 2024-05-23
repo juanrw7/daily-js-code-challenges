@@ -684,6 +684,13 @@ reduceArray( ['Yes', 'No', 'Yes', 'Maybe'], function(acc, v) {
 // Your solution for 18-reduceArray here:
 
 
+function reduceArray(arr, func, initialValue){
+  let accumulator = initialValue
+  arr.forEach((element, idx) =>{
+    accumulator = func(accumulator, element, idx)
+  })
+  return accumulator
+}
 
 
 /*-----------------------------------------------------------------------------
