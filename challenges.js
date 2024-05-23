@@ -717,7 +717,24 @@ isPrime(200) //=> false
 // Your solution for 19-isPrime here:
 
 
+// function isPrime(num) { // returns boolean
+//   console.log(num)
+//   if (num <= 1) return false; // negatives
+//   if (num % 2 === 0 && num > 2) return false; // even numbers
+//   const s = Math.sqrt(num); // store the square to loop faster
+//   for(let i = 3; i <= s; i += 2) { // start from 3, stop at the square, increment in twos
+//       if(num % i === 0) return false; // modulo shows a divisor was found
+//   }
+//   return true;
+// }
 
+const isPrime = num => {
+  if(num % 1 !== 0) return false;
+  for(let i = 2, s = Math.sqrt(num); i <= s; i++) {
+      if(num % i === 0) return false;
+  }
+  return num > 1;
+}
 
 
 /*-----------------------------------------------------------------------------
