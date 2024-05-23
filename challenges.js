@@ -489,6 +489,15 @@ fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sal
 // Your solution for 14-fromPairs here:
 
 
+function fromPairs(input) {
+  answer = {}
+  
+  input.forEach(arr => {
+    answer[arr[0]] = arr[1]
+  });
+
+  return answer
+}
 
 
 
