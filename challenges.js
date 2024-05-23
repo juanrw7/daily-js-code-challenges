@@ -763,7 +763,28 @@ intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1]) //=> [1, true, 1]
 // Your solution for 20-intersection here:
 
 
+// function intersection(arr1, arr2) {
+  
+// }
 
+
+function intersection(array1, array2) {
+  if (array1.length > array2.length) {
+    let results = []
+    results = array2.filter(value => array1.includes(value))
+    return results
+
+  } else if (array1.length < array2.length) {
+    let results = []
+    results = array1.filter(value => array2.includes(value))
+    return results
+
+  } else {
+    let results = []
+    results = array2.filter(value => array1.includes(value))
+    return results
+  }
+}
 
 
 /*---------------------------------------------------------------------------*/
