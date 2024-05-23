@@ -491,7 +491,7 @@ fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sal
 
 function fromPairs(input) {
   answer = {}
-  
+
   input.forEach(arr => {
     answer[arr[0]] = arr[1]
   });
@@ -529,6 +529,12 @@ mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44})
 // Your solution for 15-mergeObjects here:
 
 
+
+function mergeObjects(obj1, obj2, ...objs) {
+  const result = Object.assign(obj1, obj2, ...objs)
+  console.log(result)
+  return result
+}
 
 
 
